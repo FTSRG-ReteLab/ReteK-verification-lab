@@ -28,7 +28,7 @@ public class TrainSensorTest {
     @Test
     public void testAbsoluteMarginMin() {
     	trainSensor.overrideSpeedLimit(-10);
-    	verify(mockTU,times(1)).setAlarmState(true);
+    	verify(mockTU,times(2)).setAlarmState(true);
     }
     
     @Test
