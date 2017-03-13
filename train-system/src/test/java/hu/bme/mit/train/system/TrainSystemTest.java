@@ -26,7 +26,7 @@ public class TrainSystemTest {
 	}
 	
 	@Test
-	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
+	public void OverridingJoystickPosition_IncreasesReferenceSpeed() throws InterruptedException {
 		sensor.overrideSpeedLimit(10);
 
 		Assert.assertEquals(0, controller.getReferenceSpeed());
@@ -42,7 +42,7 @@ public class TrainSystemTest {
 	}
 
 	@Test
-	public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() {
+	public void OverridingJoystickPositionToNegative_SetsReferenceSpeedToZero() throws InterruptedException {
 		user.overrideJoystickPosition(4);
 		controller.followSpeed();
 		user.overrideJoystickPosition(-5);
